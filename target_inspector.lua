@@ -31,7 +31,9 @@ _addon.author = 'rjt'
 _addon.version = '0.1'
 _addon.commands = { 'ti' }
 
+config = require('config')
 texts = require('texts')
+json = require('json')
 
 target_settings = {
     bg = { alpha = 50 },
@@ -56,19 +58,33 @@ target_settings = {
         }
     }
 }
-target_info = texts:new('${value}', target_settings)
+settings = config.load(target_settings)
 
+target_info = texts.new('${value}', settings)
 
 windower.register_event('target change', function(index)
     local mob = windower.ffxi.get_mob_by_index(index)
     if mob then
-        local msg = ""
+        local msg = string.format("%s (%d)\n==================\n", mob.name, mob.id)
         for k, v in pairs(mob) do
-            msg = msg .. string.format("%s: %s\n", k, v)
+            msg = msg .. string.format("%s: %s\n", tostring(k), tostring(v))
+            if k == 'models' then
+                for i, l in pairs(v) do
+                    msg = msg .. string.format("    %s: %s\n", i, l)
+                end
+            end
         end
         target_info.value = msg
         target_info:visible(true)
     else
         target_info:visible(false)
+    end
+end)
+
+windower.register_event('addon command', function(args)
+    args = args or {}
+    if args[1] == 'save' then
+        config.save(settings)
+        print("target_index saved")
     end
 end)
