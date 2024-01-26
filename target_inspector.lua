@@ -74,7 +74,7 @@ do
 end
 
 target_info = texts.new('${value}', settings)
-
+update_flag = false
 
 -- returns a file object pointing to the JSON file on disk
 function open_json_file(file_name)
@@ -112,18 +112,20 @@ function update_json_file()
 
     file:write(mob_table_stringify, true)
 
+    windower.add_to_chat(144, 'target_inspector: json updated')
     update_flag = false
 end
 
 -- grabs all mobs in mob table and adds them
 function update_mob_table_from_memory()
     local mob_array = windower.ffxi.get_mob_array()
-    for k, mob in pairs(mob_array) do
+    for _, mob in pairs(mob_array) do
         add_mob_to_table(mob)
     end
 end
 
--- adds a single mob to the mob_table, as would be returned from windower.ffxi.get_mob_by_id(id)
+-- adds a single mob to the mob_table,
+-- mob parameter is as would be returned from windower.ffxi.get_mob_by_id(id), or its analogs
 function add_mob_to_table(mob)
     if not mob or not mob.is_npc then return end
 
@@ -185,18 +187,25 @@ windower.register_event('target change', function(index)
 end)
 
 windower.register_event('addon command', function(arg)
+    arg = arg and arg:lower()
     if arg == 'save' then
         config.save(settings)
         print("target_index saved")
     elseif arg == 'update' then
-        update_mob_table_from_memory()
-        update_json_file()
+        update_flag = true
+        update()
     elseif arg == 'show' then
         settings.show = not settings.show
         draw_update()
     elseif arg == 'nostore' then
         settings.do_not_store = not settings.do_not_store
         print((settings.do_not_store and "Not storing mob data" or "Storing mob data"))
+    else
+        print("target_inspector:")
+        print("  save - save addon state")
+        print("  update - update mob table")
+        print("  show - toggle overlay")
+        print("  nostore - toggle saving of mob table data")
     end
 end)
 
