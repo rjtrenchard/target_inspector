@@ -24,7 +24,7 @@
 -- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 -- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
--- addon
+-- addon built to inspect packets and identify similarities between monster families
 
 _addon.name = 'target_inspector'
 _addon.author = 'rjt'
@@ -35,6 +35,7 @@ config = require('config')
 texts = require('texts')
 json = require('json')
 files = require('files')
+packets = require('packets')
 
 do
     local target_settings = {
@@ -59,7 +60,8 @@ do
                 right = true
             }
         },
-        show = false
+        show = false,
+        json_file = "mob_index.json"
     }
 
     settings = config.load(target_settings)
@@ -67,28 +69,94 @@ end
 
 target_info = texts.new('${value}', settings)
 
-function open_json_file(file_name)
 
+-- returns a file object pointing to the JSON file on disk
+function open_json_file(file_name)
+    if not type(file_name) == 'string' then error("No valid file passed.") end
+
+    -- make new file object
+    local file = files.new(file_name)
+
+    if not file:exists() then
+        file:create()
+        file:write("{}\n", true)
+    end
+
+    return file
 end
 
-mob_table = {}
+-- reads JSON data from file and returns it as a table
+function read_json_file()
+    local file = open_json_file(settings.json_file)
 
+    local json_str = file:read()
+
+    return json.decode(json_str)
+end
+
+-- updates the JSON file to match the table
+function update_json_file()
+    local file = open_json_file(settings.json_file)
+
+    local mob_table_stringify = json.encode(mob_table)
+
+    file:write(mob_table_stringify, true)
+end
+
+-- grabs all mobs in mob table and adds them
+function update_mob_table_from_memory()
+    local mob_array = windower.ffxi.get_mob_array()
+    for k, mob in pairs(mob_array) do
+        add_mob_to_table(mob)
+    end
+end
+
+-- adds a single mob to the mob_table, as would be returned from windower.ffxi.get_mob_by_id(id)
+function add_mob_to_table(mob)
+    if not mob or not mob.is_npc then return end
+
+    local zone = tostring(windower.ffxi.get_info().zone)
+    if not mob_table[zone] then mob_table[zone] = {} end
+    if mob_table[zone][mob.name] then return end
+
+    mob_table[zone][mob.name] = {
+        ["model_number"] = mob.models,
+        ["entity_type"] = mob.entity_type,
+        ["spawn_type"] = mob.spawn_type,
+        ["race"] = mob.race,
+        ["status"] = mob.status,
+    }
+    updated = true;
+end
+
+-- updates text display
 function draw_update()
     target_info:visible(settings.show)
 end
 
+windower.register_event('incoming chunk', function(id, data)
+    -- on NPC update, add mob to table
+    if id == 0x00e then
+        local p = packets.parse('incoming', data)
+        local index = p['Index']
+        local mob = windower.ffxi.get_mob_by_index(index)
+        add_mob_to_table(mob)
+    end
+end)
+
+-- autosave
+windower.register_event('day change', function()
+    update_mob_table_from_memory()
+    update_json_file()
+end)
+
+-- on target change, add mob to table, display mob data
 windower.register_event('target change', function(index)
     local mob = windower.ffxi.get_mob_by_index(index)
 
-    if mob then
-        local val = {
-            ["name"] = mob.name,
-            ["models"] = mob.models[1],
-        }
-        if not mob.is_npc then
+    add_mob_to_table(mob)
 
-        end
-
+    if mob and settings.show then
         local msg = string.format("%s (%d)\n==================\n", mob.name, mob.id)
         for k, v in pairs(mob) do
             msg = msg .. string.format("%s: %s\n", tostring(k), tostring(v))
@@ -99,7 +167,7 @@ windower.register_event('target change', function(index)
             end
         end
         target_info.value = msg
-        target_info:visible(settings.show)
+        draw_update()
     else
         target_info:visible(false)
     end
@@ -109,8 +177,13 @@ windower.register_event('addon command', function(arg)
     if arg == 'save' then
         config.save(settings)
         print("target_index saved")
+    elseif arg == 'update' then
+        update_mob_table_from_memory()
+        update_json_file()
     elseif arg == 'show' then
         settings.show = not settings.show
         draw_update()
     end
 end)
+
+mob_table = read_json_file()
