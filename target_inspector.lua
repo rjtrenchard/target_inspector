@@ -100,7 +100,7 @@ function read_json_file()
 
     local file = open_json_file(settings.json_file)
 
-    local json_str = file:read()
+    local json_str = file:read():trim()
 
     return json.decode(json_str)
 end
@@ -115,7 +115,7 @@ function update_json_file()
 
     file:write(mob_table_stringify, true)
 
-    windower.add_to_chat(144, 'target_inspector: json updated')
+    windower.add_to_chat(144, 'Target_inspector: JSON updated')
     update_flag = false
 end
 
@@ -141,12 +141,12 @@ function add_mob_to_table(mob)
 
     if mob_table[zone_english][mob.name] then return end
 
-
     mob_table[zone_english][mob.name] = {
         ["model_number"] = mob.models,
         ["entity_type"] = mob.entity_type,
         ["race"] = mob.race,
     }
+
     update_flag = true
 end
 
