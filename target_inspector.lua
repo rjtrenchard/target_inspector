@@ -73,6 +73,9 @@ do
     settings = config.load(target_settings)
 end
 
+town_zone = S {
+    223, 224, 225, 226, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 256, 257, 281, 283, 284, 50, 43, 53, 131,
+}
 target_info = texts.new('${value}', settings)
 update_flag = false
 
@@ -128,17 +131,21 @@ end
 -- mob parameter is as would be returned from windower.ffxi.get_mob_by_id(id), or its analogs
 function add_mob_to_table(mob)
     if not mob or not mob.is_npc then return end
+    if mob.spawn_type ~= 16 then return end -- this is not an enemy type npc
 
-    local zone = res.zones[windower.ffxi.get_info().zone].english
-    if not mob_table[zone] then mob_table[zone] = {} end
-    if mob_table[zone][mob.name] then return end
+    local zone_id = windower.ffxi.get_info().zone
+    if town_zone:contains(zone_id) then return end
 
-    mob_table[zone][mob.name] = {
+    local zone_english = res.zones[zone_id].english
+    if not mob_table[zone_english] then mob_table[zone_english] = {} end
+
+    if mob_table[zone_english][mob.name] then return end
+
+
+    mob_table[zone_english][mob.name] = {
         ["model_number"] = mob.models,
         ["entity_type"] = mob.entity_type,
-        ["spawn_type"] = mob.spawn_type,
         ["race"] = mob.race,
-        ["status"] = mob.status,
     }
     update_flag = true
 end
@@ -209,11 +216,12 @@ windower.register_event('addon command', function(arg)
     end
 end)
 
+windower.register_event('load', function()
+    mob_table = read_json_file() or {}
+end)
 
 -- autosave events
 windower.register_event('day change', update)
 windower.register_event('zone change', update)
 windower.register_event('unload', update)
 windower.register_event('logout', update)
-
-mob_table = read_json_file()
