@@ -157,10 +157,6 @@ windower.register_event('incoming chunk', function(id, data)
     end
 end)
 
--- autosave
-windower.register_event('day change', update)
-windower.register_event('zone change', update)
-
 -- on target change, add mob to table, display mob data
 windower.register_event('target change', function(index)
     local mob = windower.ffxi.get_mob_by_index(index)
@@ -199,5 +195,12 @@ windower.register_event('addon command', function(arg)
         print((settings.do_not_store and "Not storing mob data" or "Storing mob data"))
     end
 end)
+
+
+-- autosave events
+windower.register_event('day change', update)
+windower.register_event('zone change', update)
+windower.register_event('unload', update)
+windower.register_event('logout', update)
 
 mob_table = read_json_file()
