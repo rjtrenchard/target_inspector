@@ -105,11 +105,14 @@ end
 -- updates the JSON file to match the table
 function update_json_file()
     if settings.do_not_store then return end
+    if not update_flag then return end
     local file = open_json_file(settings.json_file)
 
     local mob_table_stringify = json.encode(mob_table)
 
     file:write(mob_table_stringify, true)
+
+    update_flag = false
 end
 
 -- grabs all mobs in mob table and adds them
@@ -135,6 +138,7 @@ function add_mob_to_table(mob)
         ["race"] = mob.race,
         ["status"] = mob.status,
     }
+    update_flag = true
 end
 
 -- updates text display
