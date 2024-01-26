@@ -8,8 +8,8 @@ This can be toggled with `ti show`
 It also inspects and stores information of interest into a json file.
 This can be toggled with `ti nostore`
 
-The json will save once an hour and include any mobs currently in memory,
-as well as any mobs found along the way.
+The json will save once per game day as well as when when zoning.
+It will include any NPC's encountered in memory.
 
 Force saving the json with `ti update`
 Force saving the addon settings with `ti save`
