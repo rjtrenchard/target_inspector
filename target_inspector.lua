@@ -124,7 +124,7 @@ end
 function add_mob_to_table(mob)
     if not mob or not mob.is_npc then return end
 
-    local zone = res.zones[windower.ffxi.get_info().zone]
+    local zone = res.zones[windower.ffxi.get_info().zone].english
     if not mob_table[zone] then mob_table[zone] = {} end
     if mob_table[zone][mob.name] then return end
 
@@ -135,12 +135,16 @@ function add_mob_to_table(mob)
         ["race"] = mob.race,
         ["status"] = mob.status,
     }
-    updated = true;
 end
 
 -- updates text display
 function draw_update()
     target_info:visible(settings.show)
+end
+
+function update()
+    update_mob_table_from_memory()
+    update_json_file()
 end
 
 windower.register_event('incoming chunk', function(id, data)
@@ -154,10 +158,8 @@ windower.register_event('incoming chunk', function(id, data)
 end)
 
 -- autosave
-windower.register_event('day change', function()
-    update_mob_table_from_memory()
-    update_json_file()
-end)
+windower.register_event('day change', update)
+windower.register_event('zone change', update)
 
 -- on target change, add mob to table, display mob data
 windower.register_event('target change', function(index)
