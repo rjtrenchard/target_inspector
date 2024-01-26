@@ -34,37 +34,61 @@ _addon.commands = { 'ti' }
 config = require('config')
 texts = require('texts')
 json = require('json')
+files = require('files')
 
-target_settings = {
-    bg = { alpha = 50 },
-    pos = {
-        x = -100,
-        y = 45
-    },
-    text = {
-        font = 'arial',
-        size = 10,
-        stroke = {
-            width = 1,
-            alpha = 155,
-            red = 0,
-            green = 0,
-            blue = 0
+do
+    local target_settings = {
+        bg = { alpha = 50 },
+        pos = {
+            x = -100,
+            y = 45
         },
-        padding = 4,
-        flags = {
-            bold = false,
-            right = true
-        }
+        text = {
+            font = 'arial',
+            size = 10,
+            stroke = {
+                width = 1,
+                alpha = 155,
+                red = 0,
+                green = 0,
+                blue = 0
+            },
+            padding = 4,
+            flags = {
+                bold = false,
+                right = true
+            }
+        },
+        show = false
     }
-}
-settings = config.load(target_settings)
+
+    settings = config.load(target_settings)
+end
 
 target_info = texts.new('${value}', settings)
 
+function open_json_file(file_name)
+
+end
+
+mob_table = {}
+
+function draw_update()
+    target_info:visible(settings.show)
+end
+
 windower.register_event('target change', function(index)
     local mob = windower.ffxi.get_mob_by_index(index)
+
     if mob then
+        local val = {
+            ["name"] = mob.name,
+            ["models"] = mob.models[1],
+        }
+        if not mob.is_npc then
+
+        end
+
         local msg = string.format("%s (%d)\n==================\n", mob.name, mob.id)
         for k, v in pairs(mob) do
             msg = msg .. string.format("%s: %s\n", tostring(k), tostring(v))
@@ -75,16 +99,18 @@ windower.register_event('target change', function(index)
             end
         end
         target_info.value = msg
-        target_info:visible(true)
+        target_info:visible(settings.show)
     else
         target_info:visible(false)
     end
 end)
 
-windower.register_event('addon command', function(args)
-    args = args or {}
-    if args[1] == 'save' then
+windower.register_event('addon command', function(arg)
+    if arg == 'save' then
         config.save(settings)
         print("target_index saved")
+    elseif arg == 'show' then
+        settings.show = not settings.show
+        draw_update()
     end
 end)
