@@ -24,7 +24,11 @@
 -- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 -- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
--- addon built to inspect packets and identify similarities between monster families
+
+-------------------------------------------------------------------------------------
+-- This addon displays the windower.ffxi.get_mob_by_index(index) table on screen.
+-- it will also store
+-------------------------------------------------------------------------------------
 
 _addon.name = 'target_inspector'
 _addon.author = 'rjt'
@@ -36,6 +40,7 @@ texts = require('texts')
 json = require('json')
 files = require('files')
 packets = require('packets')
+res = require('resources')
 
 do
     local target_settings = {
@@ -61,7 +66,8 @@ do
             }
         },
         show = false,
-        json_file = "mob_index.json"
+        json_file = "mob_index.json",
+        do_not_store = false
     }
 
     settings = config.load(target_settings)
@@ -87,6 +93,8 @@ end
 
 -- reads JSON data from file and returns it as a table
 function read_json_file()
+    if settings.do_not_store then return {} end
+
     local file = open_json_file(settings.json_file)
 
     local json_str = file:read()
@@ -96,6 +104,7 @@ end
 
 -- updates the JSON file to match the table
 function update_json_file()
+    if settings.do_not_store then return end
     local file = open_json_file(settings.json_file)
 
     local mob_table_stringify = json.encode(mob_table)
@@ -115,7 +124,7 @@ end
 function add_mob_to_table(mob)
     if not mob or not mob.is_npc then return end
 
-    local zone = tostring(windower.ffxi.get_info().zone)
+    local zone = res.zones[windower.ffxi.get_info().zone]
     if not mob_table[zone] then mob_table[zone] = {} end
     if mob_table[zone][mob.name] then return end
 
@@ -183,6 +192,9 @@ windower.register_event('addon command', function(arg)
     elseif arg == 'show' then
         settings.show = not settings.show
         draw_update()
+    elseif arg == 'nostore' then
+        settings.do_not_store = not settings.do_not_store
+        print((settings.do_not_store and "Not storing mob data" or "Storing mob data"))
     end
 end)
 
