@@ -84,7 +84,6 @@ force_update = false
 function open_json_file(file_name)
     if not type(file_name) == 'string' then error("No valid file passed.") end
 
-    -- make new file object
     local file = files.new(file_name)
 
     if not file:exists() then
