@@ -1,1098 +1,278 @@
 {
-  "Sauromugue Champaign": {
-    "": {
+  "Buburimu Peninsula": {
+    "Zu": {
       "model_number": [
-        86
+        445
       ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "entity_type": 22,
+      "race": 0
     },
-    "Wayward Worm": {
-      "model_number": [
-        424
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Overturned Soil": {
-      "model_number": [
-        52
-      ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
-    },
-    "Thunderclaw Thuban": {
-      "model_number": [
-        316
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Hill Lizard": {
-      "model_number": [
-        328
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Yagudo Votary": {
-      "model_number": [
-        581
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Sauromugue Skink": {
-      "model_number": [
-        316
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Goblin Smithy": {
+    "Goblin Bounty Hunter": {
       "model_number": [
         497
       ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Goblin Rider": {
-      "model_number": [
-        1249
-      ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
-    },
-    "Diving Beetle": {
-      "model_number": [
-        408
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Riftworn Pyxis": {
-      "model_number": [
-        969
-      ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "status": 0,
+      "entity_type": 112,
       "race": 0
     },
-    "Treasure Casket": {
+    "Wake Warder Wanda": {
       "model_number": [
-        966
+        356
       ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
-    },
-    "Voidwatch Officer": {
-      "model_number": [
-        5,
-        20,
-        25,
-        12,
-        2,
-        2,
-        0,
-        0
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "race": 6,
-      "status": 0
-    },
-    "Champaign Coeurl": {
-      "model_number": [
-        367
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Smile Helper": {
-      "model_number": [
-        15,
-        56,
-        105,
-        0,
-        103,
-        104,
-        0,
-        0
-      ],
-      "entity_type": -96,
-      "spawn_type": 2,
-      "race": 6,
-      "status": 0
-    },
-    "Moogle": {
-      "model_number": [
-        82
-      ],
-      "entity_type": -100,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
-    },
-    "Goji": {
-      "model_number": [
-        2225
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "status": 3,
+      "entity_type": -8,
       "race": 0
     },
-    "Wight": {
+    "Shoal Pugil": {
       "model_number": [
-        572
+        348
       ],
       "entity_type": 0,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Yagudo Interrogator": {
+    "Snipper": {
       "model_number": [
-        599
+        356
       ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 3
+      "entity_type": 23,
+      "race": 0
     },
-    "Tabar Beak": {
+    "Bull Dhalmel": {
       "model_number": [
-        288
+        332
       ],
-      "entity_type": 104,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 35,
+      "race": 0
     },
-    "Moon Bat": {
+    "Carnivorous Crawler": {
       "model_number": [
-        256
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "NPC": {
-      "model_number": [
-        0
+        396
       ],
       "entity_type": 48,
-      "spawn_type": 130,
-      "race": 0,
-      "status": 19
+      "race": 0
     },
-    "Goblin Mugger": {
+    "Sylvestre": {
       "model_number": [
-        485
+        300
       ],
       "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Evil Weapon": {
+    "Bogy": {
       "model_number": [
-        451
+        368
       ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 112,
+      "race": 0
     },
-    "Yagudo Herald": {
+    "Water Elemental": {
       "model_number": [
-        588
+        440
       ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 112,
+      "race": 0
     },
-    "Midnight Wings": {
+    "Botulus Rex": {
       "model_number": [
-        260
+        2060
       ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 47,
+      "race": 0
     },
-    "Yagudo's Elemental": {
+    "Will-o'-the-Wisp": {
       "model_number": [
-        11
+        280
       ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 25,
+      "race": 0
     },
     "Goblin Gambler": {
       "model_number": [
         494
       ],
-      "entity_type": 8,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Yagudo Priest": {
-      "model_number": [
-        597
-      ],
-      "entity_type": 8,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Planar Rift": {
-      "model_number": [
-        2415
-      ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "status": 0,
+      "entity_type": -102,
       "race": 0
     },
-    "Evil Spirit": {
+    "Goblin Mugger": {
       "model_number": [
-        368
+        485
       ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 0,
+      "race": 0
     },
-    "Yagudo Oracle": {
+    "Goblin Ambusher": {
       "model_number": [
-        596
+        486
       ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 4,
+      "race": 0
     },
-    "???": {
+    "Poison Leech": {
       "model_number": [
-        52
+        276
+      ],
+      "entity_type": 11,
+      "race": 0
+    }
+  },
+  "Bibiki Bay": {
+    "Hobgoblin Venerer": {
+      "model_number": [
+        486
+      ],
+      "entity_type": 12,
+      "race": 0
+    },
+    "Locus Camelopard": {
+      "model_number": [
+        332
+      ],
+      "entity_type": -57,
+      "race": 0
+    },
+    "Marine Dhalmel": {
+      "model_number": [
+        332
       ],
       "entity_type": -1,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Goblin Leecher": {
+    "Hobgoblin Martialist": {
       "model_number": [
-        488
+        508
+      ],
+      "entity_type": 0,
+      "race": 0
+    },
+    "Locus Hypnos Eft": {
+      "model_number": [
+        1349
       ],
       "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Auspicious Ajattara": {
+    "Teine Sith": {
       "model_number": [
-        2245
+        280
       ],
-      "entity_type": -112,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "entity_type": -128,
+      "race": 0
     },
     "Goblin Pathfinder": {
       "model_number": [
         487
       ],
       "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Earth Elemental": {
-      "model_number": [
-        439
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "status": 0,
       "race": 0
     },
-    "Wassailer Whitby": {
+    "Locus Fiddler Crab": {
       "model_number": [
-        2383
+        2966
       ],
-      "entity_type": -1,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "entity_type": 13,
+      "race": 0
     },
-    "Dragatama": {
+    "Raven": {
       "model_number": [
-        1105
+        445
+      ],
+      "entity_type": 0,
+      "race": 0
+    },
+    "Eft": {
+      "model_number": [
+        1349
       ],
       "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Field Manual": {
+    "Intulo": {
       "model_number": [
-        2290
+        1349
       ],
-      "entity_type": 15,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "entity_type": 0,
+      "race": 0
     },
-    "Stone Monument": {
+    "Tropical Rarab": {
       "model_number": [
-        52
+        269
       ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "entity_type": -78,
+      "race": 0
     },
-    "Yagudo Theologist": {
+    "Ignis Fatuus": {
       "model_number": [
-        589
+        280
       ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 0,
+      "race": 0
     },
-    "Narsha": {
+    "Intuila": {
       "model_number": [
-        13,
-        21,
-        8,
-        10,
-        21,
-        24,
-        0,
-        0
-      ],
-      "entity_type": -48,
-      "spawn_type": 2,
-      "race": 4,
-      "status": 0
-    },
-    "Debug": {
-      "model_number": [
-        14,
-        140,
-        140,
-        0,
-        10,
-        9,
-        0,
-        0
-      ],
-      "entity_type": 103,
-      "spawn_type": 2,
-      "race": 6,
-      "status": 0
-    },
-    "Neriss": {
-      "model_number": [
-        15,
-        56,
-        105,
-        0,
-        103,
-        104,
-        0,
-        0
-      ],
-      "entity_type": -1,
-      "spawn_type": 2,
-      "race": 2,
-      "status": 0
-    },
-    "Ethereal Junction": {
-      "model_number": [
-        2447
+        1349
       ],
       "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Survival Guide": {
+    "Goblin's Rarab": {
       "model_number": [
-        2433
+        269
       ],
       "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Goblin's Beetle": {
+    "Hobgoblin Animalier": {
       "model_number": [
-        408
+        506
       ],
       "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 3
+      "race": 0
     },
-    "Yagudo Drummer": {
+    "Locus Bight Rarab": {
       "model_number": [
-        592
+        269
+      ],
+      "entity_type": 45,
+      "race": 0
+    },
+    "Locus Ghost Crab": {
+      "model_number": [
+        2965
       ],
       "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Thunder Elemental": {
-      "model_number": [
-        441
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
     "Goblin Shaman": {
       "model_number": [
         507
       ],
-      "entity_type": 8,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
+      "entity_type": 2,
+      "race": 0
     },
-    "Delightful Drake": {
+    "Island Rarab": {
       "model_number": [
-        399
+        269
+      ],
+      "entity_type": 0,
+      "race": 0
+    },
+    "Catoblepas": {
+      "model_number": [
+        332
       ],
       "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Lucky Ladon": {
+    "Tragopan": {
       "model_number": [
-        398
+        445
       ],
       "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
+      "race": 0
     },
-    "Atmacite Refiner": {
+    "Hobgoblin Fascinator": {
       "model_number": [
-        10,
-        20,
-        25,
-        12,
-        2,
-        2,
-        0,
-        0
+        507
       ],
       "entity_type": -128,
-      "spawn_type": 2,
-      "race": 6,
-      "status": 0
-    },
-    "Arke": {
-      "model_number": [
-        336
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Goblin Furrier": {
-      "model_number": [
-        490
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "race": 0,
-      "status": 0
-    },
-    "Cavernous Maw": {
-      "model_number": [
-        2324
-      ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "race": 0,
-      "status": 0
-    }
-  },
-  "Garlaige Citadel": {
-    "Goblin Footprint": {
-      "model_number": [
-        52
-      ],
-      "entity_type": 21,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Guardian Statue": {
-      "model_number": [
-        304
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "status": 3,
-      "race": 0
-    },
-    "Revenant": {
-      "model_number": [
-        368
-      ],
-      "entity_type": -1,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Banishing Gate #1": {
-      "model_number": [
-        0
-      ],
-      "entity_type": 93,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Mephitas": {
-      "model_number": [
-        284
-      ],
-      "entity_type": -60,
-      "spawn_type": 16,
-      "status": 3,
-      "race": 0
-    },
-    "Clockwork Pod": {
-      "model_number": [
-        412
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Treasure Casket": {
-      "model_number": [
-        965
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Fortalice Bats": {
-      "model_number": [
-        260
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Skewer Sam": {
-      "model_number": [
-        288
-      ],
-      "entity_type": -1,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Door Lock#2": {
-      "model_number": [
-        0
-      ],
-      "entity_type": 0,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Wanzo-Unzozo": {
-      "model_number": [
-        2,
-        17,
-        17,
-        17,
-        3,
-        3,
-        123,
-        0
-      ],
-      "entity_type": -49,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 5
-    },
-    "Riftworn Pyxis": {
-      "model_number": [
-        969
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Hellmine": {
-      "model_number": [
-        280
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Over Weapon": {
-      "model_number": [
-        451
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Bhuta": {
-      "model_number": [
-        368
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Puroboros": {
-      "model_number": [
-        280
-      ],
-      "entity_type": 119,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Valaineral": {
-      "model_number": [
-        3014
-      ],
-      "entity_type": 56,
-      "spawn_type": 2,
-      "status": 1,
-      "race": 0
-    },
-    "Moogle": {
-      "model_number": [
-        82
-      ],
-      "entity_type": 109,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Magic Jug": {
-      "model_number": [
-        412
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Joachim": {
-      "model_number": [
-        3015
-      ],
-      "entity_type": 31,
-      "spawn_type": 2,
-      "status": 1,
-      "race": 0
-    },
-    "Door Lock#4": {
-      "model_number": [
-        0
-      ],
-      "entity_type": -78,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Tainted Flesh": {
-      "model_number": [
-        320
-      ],
-      "entity_type": -1,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Roly-Poly": {
-      "model_number": [
-        1801
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 3,
-      "race": 0
-    },
-    "NPC": {
-      "model_number": [
-        0
-      ],
-      "entity_type": 0,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Oil Spill": {
-      "model_number": [
-        292
-      ],
-      "entity_type": -123,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Serket": {
-      "model_number": [
-        284
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Old Two-Wings": {
-      "model_number": [
-        256
-      ],
-      "entity_type": 8,
-      "spawn_type": 16,
-      "status": 1,
-      "race": 0
-    },
-    "Fallen Soldier": {
-      "model_number": [
-        572
-      ],
-      "entity_type": 8,
-      "spawn_type": 16,
-      "status": 1,
-      "race": 0
-    },
-    "Survival Guide": {
-      "model_number": [
-        2433
-      ],
-      "entity_type": -41,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Citadel Bats": {
-      "model_number": [
-        260
-      ],
-      "entity_type": -79,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Siege Bat": {
-      "model_number": [
-        256
-      ],
-      "entity_type": -1,
-      "spawn_type": 16,
-      "status": 1,
-      "race": 0
-    },
-    "Planar Rift": {
-      "model_number": [
-        2415
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Ethereal Junction": {
-      "model_number": [
-        2447
-      ],
-      "entity_type": 93,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Switch#4": {
-      "model_number": [
-        0
-      ],
-      "entity_type": -1,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "???": {
-      "model_number": [
-        52
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Door Lock#1": {
-      "model_number": [
-        0
-      ],
-      "entity_type": 0,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Grounds Tome": {
-      "model_number": [
-        2290
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Oaken Box": {
-      "model_number": [
-        52
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Fetid Flesh": {
-      "model_number": [
-        320
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Ramblix": {
-      "model_number": [
-        85
-      ],
-      "entity_type": 119,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Donjon Bat": {
-      "model_number": [
-        256
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Tenzen": {
-      "model_number": [
-        3012
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 1,
-      "race": 0
-    },
-    "Apururu": {
-      "model_number": [
-        3061
-      ],
-      "entity_type": -128,
-      "spawn_type": 2,
-      "status": 1,
-      "race": 0
-    },
-    "Switch#2": {
-      "model_number": [
-        0
-      ],
-      "entity_type": 0,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Vault Weapon": {
-      "model_number": [
-        451
-      ],
-      "entity_type": -128,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Kaboom": {
-      "model_number": [
-        280
-      ],
-      "entity_type": -1,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Wingrats": {
-      "model_number": [
-        260
-      ],
-      "entity_type": -76,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Geomagnetic Fount": {
-      "model_number": [
-        52
-      ],
-      "entity_type": 0,
-      "spawn_type": 2,
-      "status": 0,
-      "race": 0
-    },
-    "Door Lock#3": {
-      "model_number": [
-        0
-      ],
-      "entity_type": -1,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Demonic Weapon": {
-      "model_number": [
-        451
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Switch#3": {
-      "model_number": [
-        0
-      ],
-      "entity_type": -128,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Borer Beetle": {
-      "model_number": [
-        408
-      ],
-      "entity_type": 57,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Warden Beetle": {
-      "model_number": [
-        408
-      ],
-      "entity_type": -1,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Droma": {
-      "model_number": [
-        412
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Fallen Evacuee": {
-      "model_number": [
-        564
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Funnel Bats": {
-      "model_number": [
-        260
-      ],
-      "entity_type": 0,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "Switch#1": {
-      "model_number": [
-        0
-      ],
-      "entity_type": -1,
-      "spawn_type": 34,
-      "status": 9,
-      "race": 0
-    },
-    "Wraith": {
-      "model_number": [
-        368
-      ],
-      "entity_type": 58,
-      "spawn_type": 16,
-      "status": 0,
-      "race": 0
-    },
-    "GoalPoint": {
-      "model_number": [
-        52
-      ],
-      "entity_type": -1,
-      "spawn_type": 2,
-      "status": 0,
       "race": 0
     }
   }
