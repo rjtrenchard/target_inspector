@@ -78,6 +78,7 @@ town_zone = S {
 }
 target_info = texts.new('${value}', settings)
 update_flag = false
+force_update = false
 
 -- returns a file object pointing to the JSON file on disk
 function open_json_file(file_name)
@@ -107,7 +108,7 @@ end
 
 -- updates the JSON file to match the table
 function update_json_file()
-    if settings.do_not_store then return end
+    if not force_update and settings.do_not_store then return end
     if not update_flag then return end
     local file = open_json_file(settings.json_file)
 
@@ -117,6 +118,7 @@ function update_json_file()
 
     windower.add_to_chat(144, 'Target_inspector: JSON updated')
     update_flag = false
+    force_update = false
 end
 
 -- grabs all mobs in mob table and adds them
@@ -200,6 +202,7 @@ windower.register_event('addon command', function(arg)
         print("target_index saved")
     elseif arg == 'update' then
         update_flag = true
+        force_update = true
         update()
     elseif arg == 'show' then
         settings.show = not settings.show
